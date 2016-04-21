@@ -4,22 +4,17 @@ angular.module('starter.services', [])
   
   var data = {
     tasks: [
-      {title: "Buy groceries", task:false}
-      , {title: "Clean dog",  task:false}
+      {title: "Buy groceries"}
+      , {title: "Clean dog"}
     ]
   };
   
   function addTask(title) {
-    data.tasks.push({title: title, task:data.tasks.length +1});
+    data.tasks.push({title: title});
   }
   
-    function removeTask(id){
-        data.tasks.splice(data.tasks.indexOf(id), 1);
-    }
-    
   return {
     data: data
-    , addTask: addTask,
-      remove: removeTask
+    , addTask: addTask
   };
 });
